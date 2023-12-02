@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import TestOther from './testOther.jsx';
+import MainPage from './MainPage.jsx';
 import App from './App.jsx';
 
 const AllRoutes = () => {
@@ -8,7 +8,7 @@ const AllRoutes = () => {
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/testOther" element={<TestOther/>} />
+        <Route path="/MainPage" element={<MainPage/>} />
       </Routes>
     </Router>
   );

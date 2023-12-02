@@ -1,0 +1,26 @@
+/* relative path! */
+@font-face {
+    font-family: 'BloodyTerror';
+    src: url('../commonStyle/fonts/BloodyTerror.ttf') format('truetype');
+} 
+@font-face {
+    font-family: 'Strange';
+    src: url('../commonStyle/fonts/SomethingStrange.ttf') format('truetype');
+} 
+@font-face {
+    font-family: 'Monster';
+    src: url('../commonStyle/fonts/Mrmonster.ttf') format('truetype');
+} 
+@font-face {
+    font-family: 'Normal';
+    src: url('../commonStyle/fonts/YatraOne-Regular.ttf') format('truetype');
+} 
+
+/* common.css */
+body {
+    /* font-family: 'Strange'; */
+    margin: 0;
+    padding: 0;
+    /* background-color: #f3e0d4 !important; */
+}
+

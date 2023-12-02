@@ -16,12 +16,14 @@ const App = () => {
         <img src={reactLogo} className="logo react" alt="React logo" />
       </div>
       <h1>Find the optimal location for you</h1>
+      
       <div className="card">
           <button onClick={() => setCount((count) => count + 1)}>
-          Let's Go!
+                  Let's Go!
           </button>
       </div>
-      <Link to="/testOther">
+      
+      <Link to="/MainPage">
         <button>
           Go to other page
         </button>
