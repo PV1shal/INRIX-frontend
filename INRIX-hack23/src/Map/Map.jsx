@@ -70,29 +70,33 @@ const Map = ({ locations }) => {
 
 
   return (
-    <div className='map-container'>
+    <div className="map-container">
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         zoom={zoom}
         center={center}
         onClick={handleMapClick}
       >
-        
-        {/* <Marker position={{ lat: defaultCenter.lat, lng: defaultCenter.lng }} />
-   */}
-        {locations.map((location, index) => (
-           <CustomMarker
-              key={index}
-              index={index}
-              marker={location}
-              handleMarkerClick={handleMarkerClick}
-              selectedMarker={selectedMarker}
-              handleMarkerMouseOver={handleMarkerMouseOver}
-              handleMarkerMouseOut={handleMarkerMouseOut}
-              isInfoWindowOpen={isInfoWindowOpen}
-            />
-        ))}       
 
+        {/* <Marker position={{ lat: defaultCenter.lat, lng: defaultCenter.lng }} /> */}
+
+        {locations.map(
+          (location, index) => (
+            console.log(location.location),
+            (
+              <CustomMarker
+                key={index}
+                index={index}
+                marker={location.location}
+                handleMarkerClick={handleMarkerClick}
+                selectedMarker={selectedMarker}
+                handleMarkerMouseOver={handleMarkerMouseOver}
+                handleMarkerMouseOut={handleMarkerMouseOut}
+                isInfoWindowOpen={isInfoWindowOpen}
+              />
+            )
+          )
+        )}
       </GoogleMap>
     </div>
   );

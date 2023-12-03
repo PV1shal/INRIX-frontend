@@ -63,8 +63,8 @@ const formContainer = ({ setListings }) => {
       "http://localhost:3000/api/getListings",
       customerParams
     );
-
     console.log(listings);
+    setListings(listings.data.filteredData);
   };
 
   return (
