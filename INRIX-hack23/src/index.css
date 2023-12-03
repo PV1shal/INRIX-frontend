@@ -31,12 +31,16 @@ body {
   display: flex;
   /* min-width: 320px; */
   min-height: 100vh;
+  /* background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(/Users/alexandertsao/Desktop/VScode/INRIX-frontend/INRIX-hack23/src/commonStyle/pics/apartment_photo1.jpg); */
+
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
+
 
 button {
   border-radius: 8px;

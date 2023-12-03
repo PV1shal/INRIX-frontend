@@ -22,6 +22,7 @@ const App = () => {
         </Link>
       </div>
     </div>
+  
   )
 }
 
