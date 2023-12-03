@@ -39,6 +39,7 @@ const bedBathForm = ({bedPref, setBedPref, bathPref, setBathPref}) => {
               <option value="4">4</option>
               <option value="5">5</option>
             </select>
+            <p></p>
             <label htmlFor="bedBath">Bath:</label>
             <select id="bedBath" name="Bath:" value={bathPref} onChange={handleBathChange}>
               <option value="1">1</option>
@@ -47,7 +48,7 @@ const bedBathForm = ({bedPref, setBedPref, bathPref, setBathPref}) => {
               <option value="4">4</option>
               <option value="5">5</option>
             </select>  
-              <button type="button" onClick={handleSubmit}>Save Changes</button>
+              <button type="button" onClick={handleSubmit}>Save</button>
             </form>
           </div>
         )}
