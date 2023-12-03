@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './commonStyle/common.css'
 import Map from './Map/Map';
 import FormContainer from './filterButtons/formContainer';
+import homeLogo from './commonStyle/pics/home_with_heart.png'
+import { Link } from 'react-router-dom';
+
 //main page
 export default function MainPage() {
+
+    const {listings, setListings} = useState();
 
     const locations = [
         { lat: 37.774929, lng: -122.419416 }, // Union Square
@@ -22,13 +27,15 @@ export default function MainPage() {
       
     return(
         <div className="app-container">
-            <div className="button-header"> 
-                <FormContainer />
+            <div> 
+                <Link to="/">
+                    <img src={homeLogo} className="logo react main" alt="React logo" />
+                </Link>
+                <FormContainer {...setListings} />
             </div>
-            
-            <div>
+            <div className="map-container">
                 <Map locations={locations} />
-            </div>  
+            </div>
         </div>
     )
 }

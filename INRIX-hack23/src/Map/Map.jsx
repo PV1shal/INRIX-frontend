@@ -2,7 +2,10 @@
 import {React, useState} from 'react';
 import { GoogleMap, useLoadScript, Marker,  InfoWindow } from '@react-google-maps/api';
 import PropTypes from 'prop-types';
+
 import CustomMarker from '../CustomMarker/CustomMarker';
+import './map.css'
+
 
 const libraries = ['places'];
 const mapContainerStyle = {
@@ -67,7 +70,7 @@ const Map = ({ locations }) => {
 
 
   return (
-    <div>
+    <div className='map-container'>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         zoom={zoom}
@@ -75,9 +78,10 @@ const Map = ({ locations }) => {
         onClick={handleMapClick}
       >
         
-        <Marker position={{ lat: defaultCenter.lat, lng: defaultCenter.lng }} />
+        {/* <Marker position={{ lat: defaultCenter.lat, lng: defaultCenter.lng }} /> */}
   
         {locations.map((location, index) => (
+
            <CustomMarker
               key={index}
               index={index}
@@ -89,6 +93,7 @@ const Map = ({ locations }) => {
               isInfoWindowOpen={isInfoWindowOpen}
             />
         ))}       
+
       </GoogleMap>
     </div>
   );
