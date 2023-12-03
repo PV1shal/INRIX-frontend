@@ -27,7 +27,7 @@
 .button-header {
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: auto;
     justify-content:space-evenly;
     align-items: center;
 }
