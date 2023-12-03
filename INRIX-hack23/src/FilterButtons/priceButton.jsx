@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Buttons.css'
 
-const priceButton = () => {
+const priceButton = ({minPrice, setMinPrice, maxPrice, setMaxPrice}) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const toggleDropdown = () => {
@@ -15,12 +15,17 @@ const priceButton = () => {
         <div className="dropdown-content">
           <form>
             <label htmlFor="minPrice">Minimum:</label>
-            <input type="text" id="minPrice" name="minPrice" />
+            <input type="text" id="minPrice" name="minPrice" value={minPrice}  onChange= {(e)=> setMinPrice(e.target.value)}/>
 
             <label htmlFor="maxPrice">Maximum:</label>
-            <input type="text" id="maxPrice" name="maxPrice" />
+            <input type="text" id="maxPrice" name="maxPrice" value={maxPrice} onChange= {(e)=> setMaxPrice(e.target.value)}/>
           </form>
+          <button type="button" onClick={toggleDropdown}>
+            Save
+          </button>
         </div>
+
+        
       )}
     </div>
   );

@@ -1,7 +1,7 @@
 import "./Filters.css"
 import React from 'react'
 // import Collapsible from 'react-collapsible';
-import PriceButton from "../FilterButtons/PriceButton";
+import PriceButton from "../filterButtons/priceButton";
 
               
 const Filters = () => {
