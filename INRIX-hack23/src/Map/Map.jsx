@@ -1,15 +1,15 @@
 //AIzaSyCf6SNMBR_-7n_NaMajaJOGW9sJOShskTU
-
 import {React, useState} from 'react';
-import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+import { GoogleMap, useLoadScript, Marker,  InfoWindow } from '@react-google-maps/api';
 import PropTypes from 'prop-types';
-import { BsBalloonHeart } from "react-icons/bs";
+
 
 const libraries = ['places'];
 const mapContainerStyle = {
   width: '100vw',
   height: '100vh',
 };
+
 const defaultCenter = {
   lat: 37.77397, // default latitude
   lng: -122.431297, // default longitude
@@ -20,6 +20,8 @@ const Map = ({ locations }) => {
   const [center, setCenter] = useState(defaultCenter);
   const [zoom, setZoom] = useState(13);
   const [selectedMarker, setSelectedMarker] = useState(null);
+  const [isInfoWindowOpen, setInfoWindowOpen] = useState(false);
+
 
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: 'AIzaSyCf6SNMBR_-7n_NaMajaJOGW9sJOShskTU',
@@ -40,20 +42,28 @@ const Map = ({ locations }) => {
     setZoom(zoom + 2); 
     setCenter(position);
     setSelectedMarker(index);
-    
   };
 
-  const handleMapClick = () => {
+  const handleMapClick = (event) => {
     // Reset zoom and center if clicking on the map outside of a marker
     setZoom(13);
     setCenter({
-      defaultCenter
-      // lat: event.latLng.lat(),
-      // lng: event.latLng.lng(),
+     
+      lat: event.latLng.lat(),
+      lng: event.latLng.lng(),
     });
     setSelectedMarker(null);
   };
 
+  const handleMarkerMouseOver = () => {
+   
+    setInfoWindowOpen(true);
+  };
+
+  const handleMarkerMouseOut = () => {
+    
+    setInfoWindowOpen(false);
+  };
 
   return (
     <div>
@@ -64,8 +74,8 @@ const Map = ({ locations }) => {
         onClick={handleMapClick}
       >
         
-        {/* <Marker position={{ lat: defaultCenter.lat, lng: defaultCenter.lng }} />
-   */}
+        <Marker position={{ lat: defaultCenter.lat, lng: defaultCenter.lng }} />
+  
         {locations.map((location, index) => (
           <Marker
             key={index}
@@ -80,7 +90,22 @@ const Map = ({ locations }) => {
                 strokeWeight: 0,
               },
             }}
-          />
+            onMouseOver = {handleMarkerMouseOver}
+            onMouseOut = {handleMarkerMouseOut}
+          >
+            {isInfoWindowOpen && (
+              <InfoWindow
+                position={{ lat: location.lat, lng: location.lng }}
+                onCloseClick={() => setInfoWindowOpen(false)}
+              >
+                <div>
+                
+                  <img src="https://source.unsplash.com/1600x900?lanscape" alt="Image Preview" style={{ width: '100px', height: 'auto' }} />
+                </div>
+              </InfoWindow>
+            )}
+          </Marker>
+
         ))}
          
       </GoogleMap>
