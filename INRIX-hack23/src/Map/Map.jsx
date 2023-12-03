@@ -78,10 +78,9 @@ const Map = ({ locations }) => {
         onClick={handleMapClick}
       >
         
-        {/* <Marker position={{ lat: defaultCenter.lat, lng: defaultCenter.lng }} /> */}
-  
+        {/* <Marker position={{ lat: defaultCenter.lat, lng: defaultCenter.lng }} />
+   */}
         {locations.map((location, index) => (
-
            <CustomMarker
               key={index}
               index={index}

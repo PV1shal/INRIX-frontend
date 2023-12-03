@@ -47,7 +47,7 @@ const CommuteForm = ({
 
   return (
     <div style={{ position: "relative" }}>
-      <button onClick={toggleForm}>Commute</button>
+      <button className="button" onClick={toggleForm}>Commute</button>
 
       {formVisible && (
         <div
