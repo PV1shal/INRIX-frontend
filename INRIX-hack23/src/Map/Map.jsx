@@ -77,6 +77,7 @@ const Map = ({ locations }) => {
         center={center}
         onClick={handleMapClick}
       >
+
         {/* <Marker position={{ lat: defaultCenter.lat, lng: defaultCenter.lng }} /> */}
 
         {locations.map(

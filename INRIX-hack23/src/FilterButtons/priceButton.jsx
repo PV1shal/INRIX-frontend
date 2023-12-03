@@ -20,7 +20,7 @@ const priceButton = ({minPrice, setMinPrice, maxPrice, setMaxPrice}) => {
             <label htmlFor="maxPrice">Maximum:</label>
             <input type="text" id="maxPrice" name="maxPrice" value={maxPrice} onChange= {(e)=> setMaxPrice(e.target.value)}/>
           </form>
-          <button type="button" onClick={toggleDropdown}>
+          <button class="save-button" type="button" onClick={toggleDropdown}>
             Save
           </button>
         </div>

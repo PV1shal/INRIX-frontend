@@ -49,7 +49,7 @@ const bedBathForm = ({bedPref, setBedPref, bathPref, setBathPref}) => {
               <option value="5">5</option>
             </select>
             <p></p>
-              <button type="button" onClick={handleSubmit}>Save</button>
+              <button className='save-button' type="button" onClick={handleSubmit}>Save</button>
             </form>
           </div>
         )}

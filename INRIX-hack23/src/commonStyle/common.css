@@ -46,7 +46,9 @@
     width: 100%;
     align-items: auto;
     border: 2px solid black;
-    background-color: cornflowerblue;
+    background-color:whitesmoke;
+    opacity: 0.8
+    ;
 }
 
 .map-container {

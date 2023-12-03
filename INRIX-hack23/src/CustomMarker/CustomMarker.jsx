@@ -53,7 +53,6 @@ const CustomMarker = ({ index, marker, handleMarkerClick, selectedMarker, handle
             handleMarkerClick = {handleMarkerClick}
             handleMarkerMouseOver = {handleMarkerMouseOver}
             isInfoWindowOpen = {isInfoWindowOpen}
-            
          />
       )}
     </Marker>
