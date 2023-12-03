@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 import './priceButton.css'
 
-const priceButton = () => {
+const priceButton = ({minPrice, setMinPrice, maxPrice, setMaxPrice}) => {
   const [showDropdown, setShowDropdown] = useState(false);
-  const [minPrice, setMinPrice] = useState('');
-  const [maxPrice, setMaxPrice] = useState('');
+  // const [minPrice, setMinPrice] = useState(0);
+  // const [maxPrice, setMaxPrice] = useState(0);
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
+
+  const handleSubmit = () => {
+    console.log("minPrice: "+minPrice)
+    console.log("maxPrice: "+maxPrice)
+    setShowDropdown(!showDropdown);
+  }
 
   return (
     <div className="price-dropdown">
@@ -17,12 +23,14 @@ const priceButton = () => {
         <div className="dropdown-content">
           <form>
             <label htmlFor="minPrice">Minimum:</label>
-            <input type="text" id="minPrice" name="minPrice" onChange={(e) => setMinPrice(e.target.value)} />
+            <span className="currency">$</span>
+            <input type="text" id="minPrice" name="minPrice" value = {minPrice} onChange={(e) => setMinPrice(e.target.value)} />
 
             <label htmlFor="maxPrice">Maximum:</label>
-            <input type="text" id="maxPrice" name="maxPrice" onChange={(e) => setMaxPrice(e.target.value)} />
+            <span className="currency">$</span>
+            <input type="text" id="maxPrice" name="maxPrice" value = {maxPrice} onChange={(e) => setMaxPrice(e.target.value)} />
 
-            <button type="submit">Save Changes</button>
+            <button type="button" onClick={handleSubmit}>Save Changes</button>
           </form>
         </div>
       )}

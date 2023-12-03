@@ -1,9 +1,12 @@
 .price-dropdown {
     position: relative;
     display: inline-block;
+    /* border: 2px solid black; */
+    justify-self:stretch;
+    align-content: stretch;
   }
   
-  .button {
+.button {
     background-color: #4caf50;
     color: white;
     padding: 10px;
@@ -11,8 +14,16 @@
     border: none;
     cursor: pointer;
   }
+.currency {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #333; /* Adjust the color as needed */
+  }
   
-  .dropdown-content {
+.dropdown-content {
     display: flex;
     flex-direction: column;
     position: absolute;

@@ -15,7 +15,6 @@ const App = () => {
       <div className="contentContainer">
         <img src={reactLogo} className="logo react" alt="React logo" />
         <h1>Find the optimal location for you</h1>
-
         <Link to="/MainPage">
           <button type='button'>
             Go to other page
