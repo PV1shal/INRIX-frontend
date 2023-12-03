@@ -1,6 +1,5 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
@@ -11,6 +10,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  top: 0;
+  left: 0;
+  height: 100vh;
 }
 
 a {
@@ -24,9 +26,10 @@ a:hover {
 
 body {
   margin: 0;
+  top: 0;
+  left: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  /* min-width: 320px; */
   min-height: 100vh;
   /* background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(/Users/alexandertsao/Desktop/VScode/INRIX-frontend/INRIX-hack23/src/commonStyle/pics/apartment_photo1.jpg); */
 
@@ -41,7 +44,7 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid black;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -50,8 +53,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
+  background-color: gray;
+
 }
 button:focus,
 button:focus-visible {

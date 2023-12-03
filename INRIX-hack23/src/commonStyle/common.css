@@ -17,10 +17,27 @@
 } 
 
 /* common.css */
-body {
+.body {
     /* font-family: 'Strange'; */
     margin: 0;
     padding: 0;
     /* background-color: #f3e0d4 !important; */
 }
 
+.button-header {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.app-container {
+    display: flex;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    align-items: left;
+    border: 2px solid black;
+}

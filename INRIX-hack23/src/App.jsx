@@ -11,23 +11,16 @@ const App = () => {
 
   return (
     <div>
-        <div>
-          {/* <img src={aptBackground} className="logo" id="background-image" alt="Cozy Apartment" /> */}
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </div>
+      <img src={aptBackground} className="logo" id='background-image' alt="Cozy Apartment" />
+      <div className="contentContainer">
+        <img src={reactLogo} className="logo react" alt="React logo" />
         <h1>Find the optimal location for you</h1>
-        
-        <div className="card">
-            <button onClick={() => setCount((count) => count + 1)}>
-                    Let's Go!
-            </button>
-        </div>
-        
         <Link to="/MainPage">
-          <button>
+          <button type='button'>
             Go to other page
           </button>
         </Link>
+      </div>
     </div>
   
   )

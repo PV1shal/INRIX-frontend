@@ -1,10 +1,9 @@
 import React from 'react';
-import BasicNav from './BasicNav/BasicNav';
-import "./BasicNav/BasicNav.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import './commonStyle/common.css'
 import Filters from './Filters/Filters';
 import Map from './Map/Map';
-
+import FormContainer from './filterButtons/formContainer';
 //main page
 export default function MainPage() {
 
@@ -24,8 +23,9 @@ export default function MainPage() {
       
     return(
         <div className="app-container">
-            <BasicNav />
-            <Filters></Filters>
+            <div className="button-header"> 
+                <FormContainer />
+            </div>
             <Map locations={locations} />
         </div>
     )
