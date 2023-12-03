@@ -1,6 +1,8 @@
 /* Collapsible container styling */
 .collapsible-container {
     width: 100%;
+    background-color: lightgray;
+    
   }
   
   /* Button styling */
