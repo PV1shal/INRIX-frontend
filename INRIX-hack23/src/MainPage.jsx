@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './commonStyle/common.css'
-import Filters from './Filters/Filters';
 import Map from './Map/Map';
 import FormContainer from './filterButtons/formContainer';
 import homeLogo from './commonStyle/pics/home_with_heart.png'
@@ -22,7 +21,7 @@ export default function MainPage() {
         { lat: 37.7879, lng: -122.4075 },     // North Beach
         { lat: 37.7890, lng: -122.3896 },     // Fisherman's Wharf
         { lat: 37.7644, lng: -122.4581 },     // Ocean Beach
-        { lat: 37.7749, lng: -122.4194 }      // Market Street
+        { lat: 37.7749, lng: -122.4195}      // Market Street
       ];
 
       

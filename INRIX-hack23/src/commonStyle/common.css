@@ -44,6 +44,7 @@
     left: 0;
     height: 100%;
     width: 100%;
+    align-items: auto;
     border: 2px solid black;
     background-color: cornflowerblue;
 }
