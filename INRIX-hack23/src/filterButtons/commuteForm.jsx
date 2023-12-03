@@ -71,24 +71,28 @@ const CommuteForm = ({
                 <input
                   type="text"
                   id="preferredTime"
-                  placeholder="e.g., 30"
+                  placeholder="ex. 30"
                   value={preferredTime}
                   onChange={(e) => setPreferredTime(e.target.value)}
-                  style={{ width: '80px', marginRight: '10px' }}
+                  style={{ width: '100px' }}
                 />
 
                 <label htmlFor="destination">Destination:</label>
                 <input
                   type="text"
                   id="destination"
-                  placeholder="e.g., 123"
+                  placeholder="ex. Amazon"
                   value={destination}
                   onChange={(e) => setDestination(e.target.value)}
-                  style={{ width: '80px' }}
+                  style={{ width: '100px' }}
                 />
+                <button type="button" onClick={toggleForm}>
+                  Save
+                </button>
               </div>
             )}
           </div>
+          
         </div>
       )}
 

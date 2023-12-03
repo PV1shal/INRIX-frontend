@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './commonStyle/common.css'
 import Filters from './Filters/Filters';
@@ -6,6 +6,8 @@ import Map from './Map/Map';
 import FormContainer from './filterButtons/formContainer';
 //main page
 export default function MainPage() {
+
+    const {listings, setListings} = useState();
 
     const locations = [
         { lat: 37.774929, lng: -122.419416 }, // Union Square
@@ -24,7 +26,7 @@ export default function MainPage() {
     return(
         <div className="app-container">
             <div className="button-header"> 
-                <FormContainer />
+                <FormContainer {...setListings} />
             </div>
             <Map locations={locations} />
         </div>

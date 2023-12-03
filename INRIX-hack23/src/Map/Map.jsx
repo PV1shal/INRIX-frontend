@@ -74,7 +74,7 @@ const Map = ({ locations }) => {
         onClick={handleMapClick}
       >
         
-        <Marker position={{ lat: defaultCenter.lat, lng: defaultCenter.lng }} />
+        {/* <Marker position={{ lat: defaultCenter.lat, lng: defaultCenter.lng }} /> */}
   
         {locations.map((location, index) => (
           <Marker
@@ -93,7 +93,7 @@ const Map = ({ locations }) => {
             onMouseOver = {handleMarkerMouseOver}
             onMouseOut = {handleMarkerMouseOut}
           >
-            {isInfoWindowOpen && (
+            {/* {isInfoWindowOpen && (
               <InfoWindow
                 position={{ lat: location.lat, lng: location.lng }}
                 onCloseClick={() => setInfoWindowOpen(false)}
@@ -103,7 +103,7 @@ const Map = ({ locations }) => {
                   <img src="https://source.unsplash.com/1600x900?lanscape" alt="Image Preview" style={{ width: '100px', height: 'auto' }} />
                 </div>
               </InfoWindow>
-            )}
+            )} */}
           </Marker>
 
         ))}
