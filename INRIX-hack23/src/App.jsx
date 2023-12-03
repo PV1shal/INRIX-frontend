@@ -14,7 +14,7 @@ const App = () => {
       <img src={aptBackground} className="logo" id='background-image' alt="Cozy Apartment" />
       <div className="contentContainer" > 
         <img src={homeLogo} className="logo react" alt="React logo" />
-        <h1>Find the optimal location for you</h1>
+        <h1>Find the Perfect Place for you</h1>
         <p></p>
         <p></p>
         <p></p>

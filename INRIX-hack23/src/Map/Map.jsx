@@ -93,6 +93,7 @@ const Map = ({ locations }) => {
                 handleMarkerMouseOver={handleMarkerMouseOver}
                 handleMarkerMouseOut={handleMarkerMouseOut}
                 isInfoWindowOpen={isInfoWindowOpen}
+                listing = {location.listingData}
               />
             )
           )

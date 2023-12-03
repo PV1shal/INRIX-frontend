@@ -3,7 +3,7 @@ import { Offcanvas, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { Row, Col, Badge, Stack } from 'react-bootstrap';
 
-const SideCanvas = ({ imageUrl, name, location, score, bed, bath, price, parks, parking }) => {
+const SideCanvas = ({ listing }) => {
   const [show, setShow] = useState(true);
 
   const handleClose = () => setShow(false);
@@ -15,75 +15,81 @@ const SideCanvas = ({ imageUrl, name, location, score, bed, bath, price, parks, 
       <Offcanvas.Header closeButton>
             <Row>
                 <Col>
-                <Offcanvas.Title style={{ fontSize: '1.5rem' }}>{name}</Offcanvas.Title>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                <Offcanvas.Title style={{ fontSize: '1rem' }}>{location}</Offcanvas.Title>
+                <Offcanvas.Title style={{ fontSize: '1.5rem' }}>{listing.streetAddress}</Offcanvas.Title>
                 </Col>
             </Row>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <img src={imageUrl} alt="Property" style={{ width: '100%', marginBottom: '16px' }} />
-          <Row>
-                <Col>
-                    <Badge bg="success">Apt Name</Badge>
-                </Col>
-                <Col>
-                    <p>{name}</p>
-                </Col>
-                </Row>
+          <img src={listing.imgSrc} alt="Property" style={{ width: '100%', marginBottom: '16px' }} />
                 <Row>
                 <Col>
-                    <Badge bg="success">Score</Badge>
+                    <Badge bg="success">Bed</Badge>
                 </Col>
                 <Col>
-                    <p>{score}</p>
+                    <p>{listing.bedrooms}</p>
                 </Col>
                 </Row>
+
                 <Row>
                 <Col>
-                    <Badge bg="success">Bedrooms</Badge>
+                    <Badge bg="success">Bath</Badge>
                 </Col>
                 <Col>
-                    <p>{bed}</p>
+                    <p>{listing.bathrooms}</p>
+                </Col>
+                </Row>
+
+                <Row>
+                <Col>
+                    <Badge bg="success">Open House</Badge>
+                </Col>
+                <Col>
+                    <p>{listing.openHouse}</p>
+                </Col>
+                </Row>
+
+                <Row>
+                <Col>
+                    <Badge bg="success">Living Area</Badge>
+                </Col>
+                <Col>
+                    <p>{583}</p>
                 </Col>
                 </Row>
                 
                 <Row>
                 <Col>
-                    <Badge bg="success">Bathrooms</Badge>
+                    <Badge bg="success">Home Status</Badge>
                 </Col>
                 <Col>
-                    <p>{bath}</p>
+                    <p>{listing.homeStatus}</p>
                 </Col>
                 </Row>
+
                 <Row>
                 <Col>
                     <Badge bg="success">Price</Badge>
                 </Col>
                 <Col>
-                    <p>{price}</p>
+                    <p>{listing.price}</p>
                 </Col>
                 </Row>
 
-
-
                 <Row>
                 <Col>
-                    <Badge bg="success">Parks</Badge>
+                    <Badge bg="success">Zillow Owned</Badge>
                 </Col>
                 <Col>
-                    <p>{parks}</p>
+                    <p>false</p>
                 </Col>
                 </Row>
+
                 <Row>
                 <Col>
-                    <Badge bg="success">Praking</Badge>
+                    <Badge bg="success">On Zillow</Badge>
                 </Col>
                 <Col>
-                    <p>{parking}</p>
+                    <p>{listing.daysOnZillow}</p>
                 </Col>
                 </Row>
                 
@@ -95,15 +101,7 @@ const SideCanvas = ({ imageUrl, name, location, score, bed, bath, price, parks, 
 };
 
 SideCanvas.propTypes = {
-  score: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
-  bed: PropTypes.number.isRequired,
-  bath: PropTypes.number.isRequired,
-  price: PropTypes.number.isRequired,
-  parks: PropTypes.number.isRequired,
-  parking: PropTypes.string.isRequired,
+
 };
 
 export default SideCanvas;

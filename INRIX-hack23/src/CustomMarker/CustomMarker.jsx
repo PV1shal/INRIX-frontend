@@ -4,7 +4,7 @@ import { Marker, InfoWindow } from '@react-google-maps/api';
 import PropTypes from 'prop-types';
 import Window from '../Window/Window'
 
-const CustomMarker = ({ index, marker, handleMarkerClick, selectedMarker, handleMarkerMouseOver, handleMarkerMouseOut}) => {
+const CustomMarker = ({ index, marker, handleMarkerClick, selectedMarker, handleMarkerMouseOver, handleMarkerMouseOut, listing}) => {
 
   const [isInfoWindowOpen, setInfoWindowOpen] = useState(false);
 
@@ -53,6 +53,7 @@ const CustomMarker = ({ index, marker, handleMarkerClick, selectedMarker, handle
             handleMarkerClick = {handleMarkerClick}
             handleMarkerMouseOver = {handleMarkerMouseOver}
             isInfoWindowOpen = {isInfoWindowOpen}
+            listing = {listing}
          />
       )}
     </Marker>
@@ -69,7 +70,6 @@ CustomMarker.propTypes = {
   selectedMarker: PropTypes.number.isRequired,
   handleMarkerMouseOver: PropTypes.func.isRequired,
   handleMarkerMouseOut: PropTypes.func.isRequired,
-  
 };
 
 export default CustomMarker;

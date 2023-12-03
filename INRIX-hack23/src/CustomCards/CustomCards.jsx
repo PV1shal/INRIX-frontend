@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import SideCanvas from '../SideCanvas/SideCanvas';
 
-const CustomCard = ({ score, name, imageUrl, onClick }) => {
+const CustomCard = ({ listing, onClick }) => {
 
   const [isCanvasVisible, setCanvasVisible] = useState(false);
 
@@ -22,7 +22,7 @@ const CustomCard = ({ score, name, imageUrl, onClick }) => {
     <Card style={{ width: '12rem', backgroundColor: 'rgba(255,255,255, 0.7)'  }}>
       <Card.Img
         variant="top"
-        src={imageUrl}
+        src={listing.imgSrc}
         style={{ width: '100%', height: '5rem', objectFit: 'cover' }}
 
       />
@@ -32,7 +32,7 @@ const CustomCard = ({ score, name, imageUrl, onClick }) => {
             <Card.Title>Score:</Card.Title>
           </Col>
           <Col>
-            <Card.Title>{score}</Card.Title>
+            <Card.Title>{listing.propertyScore}</Card.Title>
           </Col>
         </Row>
         <Row>
@@ -40,7 +40,7 @@ const CustomCard = ({ score, name, imageUrl, onClick }) => {
             <Card.Title>Name:</Card.Title>
           </Col>
           <Col>
-            <Card.Title>{name}</Card.Title>
+            <Card.Title>{listing.streetAddress}</Card.Title>
           </Col>
         </Row>
         <Row>
@@ -54,15 +54,7 @@ const CustomCard = ({ score, name, imageUrl, onClick }) => {
     </Card>
     {isCanvasVisible && 
       <SideCanvas
-        imageUrl = {"https://source.unsplash.com/1600x900?landscap"}
-        score = {100}
-        location = {"San Francisco City Hall, SF, CA"}
-        bed = {1}
-        bath = {1}
-        name = {"APT1"}
-        price = {3000}
-        parks = {10}
-        parking = {"High Avaviable"}
+        listing = {listing}
 
       />} 
   </div>

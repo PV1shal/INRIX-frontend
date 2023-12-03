@@ -3,7 +3,7 @@ import { Marker, InfoWindow } from '@react-google-maps/api';
 import PropTypes from 'prop-types';
 import CustomCard from '../CustomCards/CustomCards';
 
-const Window = ({ marker, handleMarkerClick, handleMarkerMouseOver,isInfoWindowOpen}) => {
+const Window = ({ marker, handleMarkerClick, handleMarkerMouseOver,isInfoWindowOpen, listing}) => {
     
    
     return (
@@ -13,10 +13,9 @@ const Window = ({ marker, handleMarkerClick, handleMarkerMouseOver,isInfoWindowO
             style={{ opacity: 0.8 }}
             >
               <CustomCard
-                score={100}
-                name={"APT1"}
-                imageUrl={"https://source.unsplash.com/1600x900?landscap"}
+                listing={listing}
                 onClick={() => handleMarkerClick(marker)}
+                
               />
              </InfoWindow>
         </>
