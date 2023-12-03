@@ -1,5 +1,5 @@
 import './ Collapsible.css'
-
+import PriceButton from '../filterButtons/priceButton';
 import { useEffect, React} from 'react';
 
 
@@ -35,7 +35,9 @@ const Collapsible = () => {
         <button className="collapsible">Choose your preferences !</button>
         <div className="content">
           <p>Content for Collapsible 1</p>
+          {/* <PriceButton /> */}
         </div>
+
 
       </div>
     );
