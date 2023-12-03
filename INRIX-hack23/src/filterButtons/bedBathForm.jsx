@@ -27,12 +27,12 @@ const bedBathForm = ({bedPref, setBedPref, bathPref, setBathPref}) => {
   
     return (
       <div className="price-dropdown">
-        <button onClick={toggleDropdown}>Bed/Bath</button>
+        <button className="button" onClick={toggleDropdown}>Bed/Bath</button>
         {showDropdown && (
           <div className="dropdown-content">
             <form>
             <label htmlFor="bedBath">Bed:</label>
-            <select id="bedBath" name="Bed:" value={bedPref} onChange={handleBedChange}>
+            <select id="bedBath" name="Bed: " value={bedPref} onChange={handleBedChange}>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -41,13 +41,14 @@ const bedBathForm = ({bedPref, setBedPref, bathPref, setBathPref}) => {
             </select>
             <p></p>
             <label htmlFor="bedBath">Bath:</label>
-            <select id="bedBath" name="Bath:" value={bathPref} onChange={handleBathChange}>
+            <select id="bedBath" name="Bath:&nbsp" value={bathPref} onChange={handleBathChange}>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
               <option value="5">5</option>
-            </select>  
+            </select>
+            <p></p>
               <button type="button" onClick={handleSubmit}>Save</button>
             </form>
           </div>

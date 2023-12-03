@@ -4,6 +4,9 @@ import './commonStyle/common.css'
 import Filters from './Filters/Filters';
 import Map from './Map/Map';
 import FormContainer from './filterButtons/formContainer';
+import homeLogo from './commonStyle/pics/home_with_heart.png'
+import { Link } from 'react-router-dom';
+
 //main page
 export default function MainPage() {
 
@@ -25,10 +28,15 @@ export default function MainPage() {
       
     return(
         <div className="app-container">
-            <div className="button-header"> 
+            <div> 
+                <Link to="/">
+                    <img src={homeLogo} className="logo react main" alt="React logo" />
+                </Link>
                 <FormContainer {...setListings} />
             </div>
-            <Map locations={locations} />
+            <div className="map-container">
+                <Map locations={locations} />
+            </div>
         </div>
     )
 }

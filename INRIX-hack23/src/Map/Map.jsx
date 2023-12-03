@@ -2,6 +2,7 @@
 import {React, useState} from 'react';
 import { GoogleMap, useLoadScript, Marker,  InfoWindow } from '@react-google-maps/api';
 import PropTypes from 'prop-types';
+import './map.css'
 
 
 const libraries = ['places'];
@@ -66,7 +67,7 @@ const Map = ({ locations }) => {
   };
 
   return (
-    <div>
+    <div className='map-container'>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         zoom={zoom}

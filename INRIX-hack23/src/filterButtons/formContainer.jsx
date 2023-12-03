@@ -4,7 +4,7 @@ import BedBathForm from './bedBathForm'
 import DropdownForm from './preferenceForms'
 import PriceButton from './priceButton'
 import CommuteForm from './commuteForm'
-import './formContainer.css'
+import './Buttons.css'
 import axios from 'axios';
 
 
@@ -13,12 +13,11 @@ const formContainer = ({setListings}) => {
   const [location, setLocation] = useState('');
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(0);
-  const [bathPref, setBathPref] = useState();
-  const [bedPref, setBedPref] = useState();
+  const [bathPref, setBathPref] = useState(1);
+  const [bedPref, setBedPref] = useState(1);
   const [preferences, setPreferences] = useState({
     noise: 1,
     parking: 1,
-    transit: 1,
   });
 
   const [commuteSelection, setCommuteSelection] = useState(false);
@@ -32,18 +31,6 @@ const formContainer = ({setListings}) => {
   const commuteProps = {commuteSelection, setCommuteSelection, preferredTime, setPreferredTime, destination, setDestination}
 
   const handleSubmit = async() => {
-    // console.log("Submitting to backend")
-    // console.log("location:" + location)
-    // console.log("minPrice:" + minPrice)
-    // console.log("maxPrice:" +maxPrice)
-    // console.log("bathPref: "+bathPref)
-    // console.log("bedPref: " + bedPref)
-    // console.log("noise preference: "+ preferences.noise)
-    // console.log("parking preference: "+ preferences.parking)
-    // console.log("transit preference: "+ preferences.transit)
-    // console.log("commute preference: "+ commuteSelection)
-    // console.log("commuteTime: "+ preferredTime)
-    // console.log("destination: "+ destination)
 
     const customerParams = {
         "location": location,
@@ -72,7 +59,7 @@ const formContainer = ({setListings}) => {
             <BedBathForm  {...bedBathProps}/>
             <CommuteForm {...commuteProps}/>
             <DropdownForm {...preferencesProps}/>
-            <button onClick={handleSubmit}>Submit</button>
+            <button className="button" id="submit-button" onClick={handleSubmit}>Submit</button>
         </div>
     </div>
   );

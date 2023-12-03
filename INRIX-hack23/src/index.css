@@ -29,9 +29,7 @@ body {
   top: 0;
   left: 0;
   display: flex;
-  /* min-width: 320px; */
   min-height: 100vh;
-  /* background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(/Users/alexandertsao/Desktop/VScode/INRIX-frontend/INRIX-hack23/src/commonStyle/pics/apartment_photo1.jpg); */
 
 }
 

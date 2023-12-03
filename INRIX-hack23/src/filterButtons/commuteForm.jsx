@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Buttons.css'
 
 const CommuteForm = ({
   commuteSelection,
@@ -27,7 +28,7 @@ const CommuteForm = ({
   return (
     <div style={{ position: 'relative' }}>
       {/* Button or dropdown to trigger the form */}
-      <button onClick={toggleForm}>Commute</button>
+      <button className="button" onClick={toggleForm}>Commute</button>
 
       {/* Display form when triggered */}
       {formVisible && (
@@ -52,7 +53,7 @@ const CommuteForm = ({
               <button
                 onClick={() => handleSelection('Yes')}
                 className={commuteSelection === 'Yes' ? 'selected' : ''}
-                style={{ marginRight: '10px' }} // Add margin between buttons
+                style={{ marginRight: '10px', justifyContent:'center' }} // Add margin between buttons
               >
                 Yes
               </button>
@@ -74,7 +75,7 @@ const CommuteForm = ({
                   placeholder="ex. 30"
                   value={preferredTime}
                   onChange={(e) => setPreferredTime(e.target.value)}
-                  style={{ width: '100px' }}
+                  style={{ width: '180px' }}
                 />
 
                 <label htmlFor="destination">Destination:</label>
@@ -84,7 +85,7 @@ const CommuteForm = ({
                   placeholder="ex. Amazon"
                   value={destination}
                   onChange={(e) => setDestination(e.target.value)}
-                  style={{ width: '100px' }}
+                  style={{ width: '180px' }}
                 />
                 <button type="button" onClick={toggleForm}>
                   Save

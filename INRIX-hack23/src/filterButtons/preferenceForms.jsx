@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./Buttons.css"
 
 const PreferenceButtons = ({ category, selectedValue, onSelect }) => {
   const buttons = Array.from({ length: 5 }, (_, index) => (
@@ -45,7 +46,7 @@ const DropdownForm = ({ preferences, setPreferences }) => {
 
   return (
     <div style={{ position: 'relative' }}>
-      <button type="button" onClick={handleDropdownToggle}>
+      <button className="button" type="button" onClick={handleDropdownToggle}>
         Preferences
       </button>
 
@@ -82,14 +83,6 @@ const DropdownForm = ({ preferences, setPreferences }) => {
             <PreferenceButtons
               category="parking"
               selectedValue={preferences.parking}
-              onSelect={handlePreferenceChange}
-            />
-          </div>
-          <div>
-            <span>Transit: </span>
-            <PreferenceButtons
-              category="transit"
-              selectedValue={preferences.transit}
               onSelect={handlePreferenceChange}
             />
           </div>

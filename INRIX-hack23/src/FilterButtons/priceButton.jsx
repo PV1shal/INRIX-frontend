@@ -10,7 +10,7 @@ const priceButton = ({minPrice, setMinPrice, maxPrice, setMaxPrice}) => {
 
   return (
     <div className="price-dropdown">
-      <button onClick={toggleDropdown}>Price</button>
+      <button className= "button" onClick={toggleDropdown}>Price</button>
       {showDropdown && (
         <div className="dropdown-content">
           <form>
@@ -24,8 +24,6 @@ const priceButton = ({minPrice, setMinPrice, maxPrice, setMaxPrice}) => {
             Save
           </button>
         </div>
-
-        
       )}
     </div>
   );
